@@ -1,10 +1,10 @@
-
+//Main File for running the desired functions to edit database
 // assigning variables
 var td,c,d,e,editid,edittitle,editdesc,al,ot,rl,hmm1,hmm;
 
 choose();
 
-function choose()
+function choose()   //Fucntion to choose options
 {
 
 
@@ -22,15 +22,15 @@ function choose()
   var a1 = `${options}`;
 
   readline.close();
-  switch (a1)
+  switch (a1)                  //Switch case used for determining selected option
   {
-    case '1': addcust();
+    case '1': addcust();       //Calling add customer fucntion for option 1
     break;
-    case '2': delcust();
+    case '2': delcust();       //Calling delete customer fucntion for option 2
     break;
-    case '3': viewcust();
+    case '3': viewcust();      //Calling view customer fucntion for option 3
     break;
-    case '4': editcust();
+    case '4': editcust();      //Calling edit customer fucntion for option 4
     break;
     case '5': break;
     default: console.log("Invalid option");
@@ -39,7 +39,7 @@ function choose()
 })
 }
 
-  function addcust()
+  function addcust()           //Adding customer to db
   {
 
 
@@ -70,7 +70,7 @@ function choose()
   } // addcust function closed
 
 
- function delcust()
+ function delcust()           //Deleting customer from db
  {
 
    const readline = require('readline').createInterface
@@ -93,13 +93,13 @@ function choose()
 
  }
 
- function viewcust()
+ function viewcust()        //Viewing customer from db
  {
    connectt3();
 
  }
 
- function editcust()
+ function editcust()       //Editing customer in db
  {
    const readline = require('readline').createInterface
    ({
@@ -131,7 +131,7 @@ function choose()
 
 // intialization of client
 
-var MongoClient = require('mongodb').MongoClient;
+var MongoClient = require('mongodb').MongoClient;              //Mongo connection
 var url = "mongodb://localhost:27017/";
 
 function connectt1()
